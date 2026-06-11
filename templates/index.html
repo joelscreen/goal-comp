@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panacea - Predict, Preserve, Provide</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <p><strong>PANACEA</strong></p>
+                <button><i class="fa-solid fa-house"></i>&nbsp;HOME</button>
+                <button><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;PREDICT</button>
+                <button><i class="fa-solid fa-jar"></i>&nbsp;PRESERVE</button>
+                <button><i class="fa-solid fa-handshake"></i>&nbsp;PROVIDE</button>
+            </div>
+            <div class="navbar">
+                <img src="{{url_for('static', filename='assets/logo.png')}}" alt="panacea logo" height="100" width="100">
+            </div>
+            <div class="content">
+                <div class="desc-content">
+                    <div class="non-img-desc">
+                        <div class="desc">
+                            <strong>Predict, Preserve, Provide</strong>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quis tempore eveniet placeat, cupiditate aliquam voluptates minima recusandae libero dolorum veniam explicabo?</p>
+                        </div>
+                        <br>
+                        <div class="save-food">
+                            Start Saving Food Today
+                            <p>Track, manage, and save food smarter with Panacea.</p>
+                            <div class="options">
+                                <button class="save-food-add-item"><i class="fa-solid fa-plus"></i>&nbsp;Add Item</button>
+                                &emsp;
+                                <button class="save-food-scan-item"><i class="fa-solid fa-qrcode"></i>&nbsp;Scan Food</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="recipe">
+                            Recipes
+                            <br>
+                            <br>
+                            <div class="options">
+                                <img src="{{url_for('static', filename='assets/banana.png')}}" alt="banana" width="100" height="100">
+                                &emsp;
+                                <p>
+                                    <strong>Your Bananas are Expiring Soon!</strong>
+                                    <br>
+                                    Try our Banana Pancake Recipe before it's too late
+                                    <br>
+                                    <a href="">View Recipe &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-desc">
+                        <img src="{{url_for('static', filename='assets/earth-food-pic.jpeg')}}" alt="food image" width="490" height="490">
+                    </div>
+                </div>
+                <br>
+                <div class="stats">
+                    <p>1 billion meals are being wasted everyday | 90% of people preserve food | 0 people have saved food using this website</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
