@@ -1,0 +1,2 @@
+# goal competition
+for dunes
