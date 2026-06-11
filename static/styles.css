@@ -1,0 +1,191 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+    background-color: rgb(224, 223, 219);
+    margin: 0;
+}
+
+button {
+    width: auto;
+    height: 50px;
+    font-size: 23px;
+    color: #000000;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: left;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: #186918;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block; 
+}
+
+a:hover {
+    transform: translateY(-3px);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    color: #ffffff;
+    background-color: #198819;
+}
+
+.sidebar {
+    background-color: #C9D1C9;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    padding-top: 45px;
+    padding-left: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    z-index: 999;
+}
+
+.sidebar p {
+    font-size: 28px;
+    
+}
+
+.navbar {
+    background-color: #506e50;
+    width: 100vw;
+    height: 40px;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    padding-left: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 40px;
+    margin-left: 297px;
+    padding: 20px;
+    padding-top: 45px;
+}
+
+.desc {
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    font-size: 33px;
+    color: #000000;
+}
+
+.desc p {
+    font-size: 20px;
+    color: #000000;
+}
+
+.save-food {
+    background-color: #d9e0d9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    font-size: 28px;
+    color: #000000;
+    border: 2px solid #bbf0b9;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.save-food:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.save-food p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.save-food button {
+    border: 2px solid #145c11;
+    padding: 30px;
+}
+
+.save-food-scan-item:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.save-food-add-item {
+    background-color: #198819;
+    color: #ffffff;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+}
+
+.recipe {
+    background-color: #d9e0d9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    font-size: 28px;
+    color: #000000;
+    border: 2px solid #bbf0b9;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.recipe p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.recipe:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.stats {
+    background-color: #d9e0d9;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 30px;
+    color: #000000;
+    border: 2px solid #bbf0b9;
+    display: flex;
+    justify-content: center;
+}
+
+.stats p {
+    font-size: 20px;
+    color: #000000;
+}
+
+
+.desc-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30vh;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.img-desc {
+    padding: 20px;
+    min-height: 400px;
+    font-size: 30px;
+    color: #C9D1C9;
+}
