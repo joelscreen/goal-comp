@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panacea - Predict, Preserve, Provide</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <p><strong>PANACEA</strong></p>
+                <button onclick="window.location.href='/'"><i class="fa-solid fa-house"></i>&nbsp;HOME</button>
+                <button onclick="window.location.href='/predict'"><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;PREDICT</button>
+                <button onclick="window.location.href='/preserve'"><i class="fa-solid fa-jar"></i>&nbsp;PRESERVE</button>
+                <button onclick="window.location.href='/provide'"><i class="fa-solid fa-handshake"></i>&nbsp;PROVIDE</button>
+                <button onclick="window.location.href='/recipes'"><i class="fa-solid fa-list"></i>&nbsp;RECIPES</button>
+                <button onclick="window.location.href='/devices'"><i class="fa-solid fa-mobile"></i>&nbsp;DEVICES</button>
+                <button onclick="window.location.href='/notifications'"><i class="fa-solid fa-bell"></i>&nbsp;NOTIFICATIONS</button>
+            </div>
+            <div class="navbar">
+                <img src="{{url_for('static', filename='assets/logo.png')}}"
+                    alt="panacea logo"
+                    height="100"
+                    width="100">
+            </div>
+            <div class="content">
+                <div class="desc" style="width: max-content;">
+                    <strong style="font-size: 50px;">Notifications</strong>
+                    <p style="font-size: 30px;">Access your Latest Notifications</p>
+                </div>
+                <div class="notifications" id="notifications">
+                </div>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='scripts/notifications.js')}}"></script>
+    </body>
+</html>

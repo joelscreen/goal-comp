@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panacea - Module Input</title>
+    </head>
+    <body>
+        <h1>Module Input</h1>
+        <br>
+        Temperature: <input type="text" placeholder="Temperature" id="temperature">
+        <br>
+        <br>
+        Humidity: <input type="text" placeholder="Humidity" id="humidity">
+        <br>
+        <br>
+        Freshness: <input type="text" placeholder="Freshness" id="freshness">
+        <br>
+        <br>
+        <button id="broadcast-btn">Broadcast</button>
+        <script src="{{url_for('static', filename='scripts/module-input.js')}}"></script>
+        <p id="return-back-module-input"></p>
+    </body>
+</html>

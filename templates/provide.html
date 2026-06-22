@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panacea - Predict, Preserve, Provide</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <p><strong>PANACEA</strong></p>
+                <button onclick="window.location.href='/'"><i class="fa-solid fa-house"></i>&nbsp;HOME</button>
+                <button onclick="window.location.href='/predict'"><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;PREDICT</button>
+                <button onclick="window.location.href='/preserve'"><i class="fa-solid fa-jar"></i>&nbsp;PRESERVE</button>
+                <button onclick="window.location.href='/provide'"><i class="fa-solid fa-handshake"></i>&nbsp;PROVIDE</button>
+                <button onclick="window.location.href='/recipes'"><i class="fa-solid fa-list"></i>&nbsp;RECIPES</button>
+                <button onclick="window.location.href='/devices'"><i class="fa-solid fa-mobile"></i>&nbsp;DEVICES</button>
+                <button onclick="window.location.href='/notifications'"><i class="fa-solid fa-bell"></i>&nbsp;NOTIFICATIONS</button>
+            </div>
+            <div class="navbar">
+                <img src="{{url_for('static', filename='assets/logo.png')}}" alt="panacea logo" height="100" width="100">
+            </div>
+            <div class="content">
+                <div class="desc-content">
+                    <div class="non-img-desc">
+                        <div class="desc">
+                            <strong style="font-size: 50px;">Provide</strong>
+                            <p style="font-size: 26px;">Sharing to Those Who Need it the Most</p>
+                        </div>
+                        <br>
+                        <div class="save-food">
+                            <span style="font-size: 32px;">Available to Share</span>
+                            <table id="available-to-share">
+                                <tr>
+                                    <th>Food Item</th>
+                                    <th>Number of Servings</th>
+                                    <th>Priority Score</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="recipe" id="expiring-recipes-donate">
+                        </div>
+                    </div>
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    <div class="food-details">
+                        <div class="img-food-details" style="width: 490px; height: 510px;">
+                            <img src="{{url_for('static', filename='assets/provide-pic.jpg')}}" alt="food image" width="490" height="510">
+                        </div>
+                        <br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSes3-nuan93UXb4xj-ZLPtkte1gQRBNZkGm6mMFaYqm9ivCuw/viewform?usp=publish-editor" target="_blank"><button><i class="fa-solid fa-heart"></i>&nbsp;Donate</button></a>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <div class="demand-factors">
+                        <div style="font-size: 32px;">Nearby Food Charities/Banks</div>
+                        <ol>
+                            <li>UAE Food Bank</li>
+                            <li>Emirates Red Crescent</li>
+                            <li>Beit Al Khair Society</li>
+                            <li>International Charity Organization</li>
+                            <li>Al Jalila Foundation</li>
+                        </ol>
+                    </div>
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    <div class="demand-factors">
+                        Sustainable Index Score Calculator
+                        <br>
+                        <br>
+                        <div class="calorie-form" id="calorie-form">
+                            <label>Amount of food consumed:</label><input type="text" placeholder="food consumed..." id="consumed">
+                            <br>
+                            <label>Amount of food donated:</label><input type="text" placeholder="food wasted..." id="donated">
+                            <br>
+                            <label>Amount of food purchased:</label><input type="text" placeholder="food purchased..." id="purchased">
+                            <br>
+                            <br>
+                            <button id="calculate-btn-sustain"><i class="fa-solid fa-calculator"></i>&nbsp;Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='scripts/provide.js')}}"></script>
+    </body>
+</html>

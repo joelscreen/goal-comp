@@ -11,10 +11,13 @@
         <div class="container">
             <div class="sidebar">
                 <p><strong>PANACEA</strong></p>
-                <button><i class="fa-solid fa-house"></i>&nbsp;HOME</button>
-                <button><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;PREDICT</button>
-                <button><i class="fa-solid fa-jar"></i>&nbsp;PRESERVE</button>
-                <button><i class="fa-solid fa-handshake"></i>&nbsp;PROVIDE</button>
+                <button onclick="window.location.href='/'"><i class="fa-solid fa-house"></i>&nbsp;HOME</button>
+                <button onclick="window.location.href='/predict'"><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;PREDICT</button>
+                <button onclick="window.location.href='/preserve'"><i class="fa-solid fa-jar"></i>&nbsp;PRESERVE</button>
+                <button onclick="window.location.href='/provide'"><i class="fa-solid fa-handshake"></i>&nbsp;PROVIDE</button>
+                <button onclick="window.location.href='/recipes'"><i class="fa-solid fa-list"></i>&nbsp;RECIPES</button>
+                <button onclick="window.location.href='/devices'"><i class="fa-solid fa-mobile"></i>&nbsp;DEVICES</button>
+                <button onclick="window.location.href='/notifications'"><i class="fa-solid fa-bell"></i>&nbsp;NOTIFICATIONS</button>
             </div>
             <div class="navbar">
                 <img src="{{url_for('static', filename='assets/logo.png')}}" alt="panacea logo" height="100" width="100">
@@ -24,16 +27,16 @@
                     <div class="non-img-desc">
                         <div class="desc">
                             <strong>Predict, Preserve, Provide</strong>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quis tempore eveniet placeat, cupiditate aliquam voluptates minima recusandae libero dolorum veniam explicabo?</p>
+                            <p>An AI-driven household food sustainability ecosystem</p>
                         </div>
                         <br>
                         <div class="save-food">
                             Start Saving Food Today
                             <p>Track, manage, and save food smarter with Panacea.</p>
                             <div class="options">
-                                <button class="save-food-add-item"><i class="fa-solid fa-plus"></i>&nbsp;Add Item</button>
+                                <button class="save-food-add-item" id="add-item"><i class="fa-solid fa-plus"></i>&nbsp;Add Item</button>
                                 &emsp;
-                                <button class="save-food-scan-item"><i class="fa-solid fa-qrcode"></i>&nbsp;Scan Food</button>
+                                <button class="save-food-scan-item" onclick="window.location.href='/preserve'"><i class="fa-solid fa-list-check"></i>&nbsp;View Items</button>
                             </div>
                         </div>
                         <br>
@@ -41,28 +44,65 @@
                             Recipes
                             <br>
                             <br>
-                            <div class="options">
-                                <img src="{{url_for('static', filename='assets/banana.png')}}" alt="banana" width="100" height="100">
-                                &emsp;
-                                <p>
-                                    <strong>Your Bananas are Expiring Soon!</strong>
-                                    <br>
-                                    Try our Banana Pancake Recipe before it's too late
-                                    <br>
-                                    <a href="">View Recipe &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
-                                </p>
+                            <div class="options" id="expiring-recipes" style="display: flex; flex-direction: column;">
                             </div>
                         </div>
                     </div>
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
+                    &emsp;
                     <div class="img-desc">
                         <img src="{{url_for('static', filename='assets/earth-food-pic.jpeg')}}" alt="food image" width="490" height="490">
                     </div>
                 </div>
                 <br>
                 <div class="stats">
-                    <p>1 billion meals are being wasted everyday | 90% of people preserve food | 0 people have saved food using this website</p>
+                    <p>
+                        <div class="food-saved-stats">
+                            <img src="{{url_for('static', filename='assets/meal-fork.png')}}" alt="meals wasted" width="180" height="180">
+                            &emsp;
+                            <p>
+                                <strong style="font-size: 45px;">1B+ </strong><span style="font-size: 28px;"></span>
+                                <br>
+                                <strong style="font-size: 22px;">Meals Wasted</strong>
+                                <br>
+                                <span style="color: #186918;">Every Single Day</span>
+                            </p>
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            <img src="{{url_for('static', filename='assets/house-waste.png')}}" alt="food wasted in houses" width="180" height="170">
+                            &emsp;
+                            <p>
+                                <strong style="font-size: 45px;">60</strong><span style="font-size: 28px;">%</span>
+                                <br>
+                                <strong style="font-size: 22px;">Of Food Wastage</strong>
+                                <br>
+                                <span style="color: #186918;">Comes From Homes</span>
+                            </p>
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            <img src="{{url_for('static', filename='assets/dust-bin.png')}}" alt="food wasted per person" width="170" height="170">
+                            &emsp;
+                            <p>
+                                <strong style="font-size: 45px;">79 </strong><span style="font-size: 28px;">kg</span>
+                                <br>
+                                <strong style="font-size: 22px;">Food Wasted</strong>
+                                <br>
+                                <span style="color: #186918;">Per Person Annually</span>
+                            </p>
+                        </div>
+                    </p>
                 </div>
             </div>
         </div>
+        <script src="{{url_for('static', filename='scripts/index.js')}}"></script>
     </body>
 </html>
