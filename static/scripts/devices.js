@@ -19,13 +19,22 @@ function renderTable() {
 
         const row = document.createElement("tr");
 
-        var times_wasted = Math.floor(Math.random()*10)
-        var avg_waste = Math.floor(Math.random()*10)
+        var times_wasted = Math.floor(Math.random()*10)+1
+        var avg_waste = 0;
+        var total_waste = 0;
+        var avg_waste_list = [];
+        for (var i = 0; i < 7; i++) {
+            waste_num = Math.floor(Math.random()*10);
+            avg_waste_list.push(waste_num);
+            total_waste += waste_num;
+        }
+        avg_waste = total_waste/7;
+        avg_waste = avg_waste.toFixed(2);
 
         row.innerHTML = `
             <td>${item.name}</td>
             <td>${times_wasted}</td>
-            <td>${avg_waste}</td>
+            <td>${avg_waste}g</td>
         `;
 
         eco_bucket_table.appendChild(row);
