@@ -4,7 +4,7 @@ from google import genai
 app = Flask(__name__)
 
 client = genai.Client(
-    api_key="AQ.Ab8RN6IwlFcjYYb2YFQBvY_xesXWnu4DAj1_F0-8g6ke4eJ3Lw"
+    api_key="AQ.Ab8RN6IyTV7mzT2_TlFT6wFYMzmE0_PSVmeoKXmcR91gPz7lbQ"
 )
 
 freshness_data = {
