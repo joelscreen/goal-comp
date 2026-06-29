@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from groq import Groq
+import os
 
 app = Flask(__name__)
 
-client = Groq(api_key="GROK_API_KEY")
+client = Groq(api_key=os.getenv("GROK_API_KEY"))
 
 freshness_data = {
     "temperature": "",
